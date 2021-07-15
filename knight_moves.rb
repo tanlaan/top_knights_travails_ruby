@@ -1,3 +1,22 @@
+def knight_moves(start_position, end_position)
+    #Build the tree
+    #Search the tree
+    #Give response
+    #End
+end
+
+class KnightMoveList
+    attr_reader(:root)
+
+    def initialize(start_position)
+        @root = build_graph(start_position)
+    end
+
+    def build_graph(start_position)
+
+    end
+end
+
 class Node
     attr_reader(:root, :children)
 
