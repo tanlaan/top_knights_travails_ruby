@@ -18,20 +18,25 @@ class KnightMoveList
 end
 
 class Node
-    attr_reader(:root, :children)
+    attr_reader(:value, :children)
 
-    def initialize(posiiton)
-        @root = position
+    def initialize(position)
+        @value = position
         @children = []
     end
 
     def insert_child(position)
-        @children.append(Node.new(position))
+        # Create node from position
+        # Add node to children
+        # Return node
+        new_node = Node.new(position)
+        @children.append(new_node)
+        new_node
     end
 
     # Not sure we would really need this
     def remove_child(position)
-        @children.delete_if {|child| child.root == position}
+        @children.delete_if {|child| child.value == position}
     end
 
     # Check if Node is a leaf
