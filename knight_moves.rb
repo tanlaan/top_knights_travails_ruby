@@ -4,10 +4,10 @@ def knight_moves(start_position, end_position)
     #Search the tree
     moves_required = move_graph.find(end_position)
     #Give response
-    # p "You made it in #{moves_required.length} moves! Here's your path:"
-    # for move in moves_required do
-    #     p move
-    # end
+    p "You made it in #{moves_required.length - 1} moves! Here's your path:"
+    for move in moves_required do
+        p move
+    end
 end
 
 class KnightMoveList
